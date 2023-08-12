@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-st.header("LCMelt: A Liquid Crystal Melting Point Prediction App")
+st.header("LCMelt v1.0: A Liquid Crystal Melting Point Prediction App")
 st.text_input("Enter a valid SMILES string for your molecule: ", key="SMILES")
 
 if st.button('Make prediction'):
