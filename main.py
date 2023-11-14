@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-st.header("LCMelt v1.0: A Liquid Crystal Melting Point Prediction App")
+st.header("LCMelt v1.1: A Liquid Crystal Melting Point Prediction App")
 st.text_input("Enter a valid SMILES string for your molecule: ", key="SMILES")
 
 if st.button('Make prediction'):
@@ -18,4 +18,4 @@ if st.button('Make prediction'):
 
     args = chemprop.args.PredictArgs().parse_args(arguments)
     preds = chemprop.train.make_predictions(args=args, smiles=smiles)
-    st.write(f"The melting point of your molecule is: {int(np.squeeze(preds))} degrees Celsius")
+    st.write(f"The melting point of your molecule is: {int(np.squeeze(preds)) - 10} degrees Celsius")
